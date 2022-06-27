@@ -15,3 +15,18 @@ for d in data:
 print("the average length of each piece of comment is", int(sum_len/len(data)))
 
 
+new = []
+for d in data:
+	if len(d) < 100:
+		new.append(d)
+print("in total there are", len(new), "pieces of comment is less than 100 words")
+print(new[0])
+print(new[1])
+
+good = []
+for d in data:
+	if 'good' in d:
+		good.append(d)
+print("in total there are", len(good), "pieces of comment has a word of 'good'")
+print(good[0])
+print(good[1])
