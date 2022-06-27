@@ -4,8 +4,14 @@ with open('reviews.txt', 'r') as f:
 	for line in f:
 		data.append(line)
 		count += 1
-		if count % 1000 == 0:
+		if count % 10000 == 0:
 			print(len(data))
-print(len(data))
+print('the file is entirely read, it contains', len(data), 'pieces of comments')
 
-print(data[0])
+sum_len = 0
+for d in data:
+	sum_len += len(d)
+
+print("the average length of each piece of comment is", int(sum_len/len(data)))
+
+
